@@ -1,0 +1,9 @@
+@import "~src/sass/abstracts/variables";
+
+.layout {
+  width: 100%;
+  height: 100vh;
+  background-color: $color-gray-white;
+  overflow: auto;
+  z-index: 9999999;
+}

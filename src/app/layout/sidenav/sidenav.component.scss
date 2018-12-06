@@ -1,0 +1,70 @@
+@import "functions";
+@import "variables";
+@import "~src/sass/abstracts/variables";
+
+.sidenav {
+  max-width: 15.625rem;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  background-color: $color-black-dark;
+
+  &__brand {
+    color: $white;
+    font-size: 1.375rem;
+    height: 4.6875rem;
+    padding: 1rem;
+    cursor: pointer;
+
+    &__icon {
+      margin-right: 1rem;
+    }
+  }
+
+  &__menu {
+    color: $white;
+
+    &__group {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      &__link {
+        &:link,
+        &:visited {
+          color: $white;
+          text-decoration: none;
+        }
+        cursor: pointer;
+        height: 2.8125rem;
+        display: block;
+
+        &:hover {
+          background-color: $color-black-darker;
+        }
+
+        &:hover &__icon {
+          color: $color-blue;
+        }
+
+        &--active {
+          background-color: $color-black-darker;
+        }
+
+        &--active &__icon {
+          color: $color-blue;
+        }
+
+        &__name {
+          width: 100%;
+          display: block;
+        }
+
+        &__icon {
+          margin: 0 0.8rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+<div class="sidenav">
+    <div class="sidenav__brand d-flex align-items-center">
+        <span class="sidenav__brand__icon">
+            <fa-icon [icon]="faCity"></fa-icon>
+        </span>
+        <span class="sidenav__brand__name">
+            Building App
+        </span>
+    </div>
+    <nav class="sidenav__menu">
+        <ul class="sidenav__menu__group">
+            <li class="sidenav__menu__group__item">
+                <a class="sidenav__menu__group__link d-flex align-items-center"
+                   routerLink="/app/buildings"
+                   routerLinkActive="sidenav__menu__group__link--active">
+                    <fa-icon class="sidenav__menu__group__link__icon"
+                             [icon]="faBuilding">
+                    </fa-icon>
+                    <span class="sidenav__menu__group__link__name">
+                        Buildings
+                    </span>
+                </a>
+            </li>
+            <li class="sidenav__menu__group__item">
+                <a class="sidenav__menu__group__link d-flex align-items-center"
+                   routerLink="/app/view-record"
+                   routerLinkActive="sidenav__menu__group__link--active">
+                    <fa-icon class="sidenav__menu__group__link__icon"
+                             [icon]="faCharBar">
+                    </fa-icon>
+                    <span class="sidenav__menu__group__link__name">
+                        View Record
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>

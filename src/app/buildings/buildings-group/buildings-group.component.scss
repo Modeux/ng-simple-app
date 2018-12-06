@@ -1,0 +1,8 @@
+@import "functions";
+@import "variables";
+@import "~src/sass/abstracts/variables";
+
+.active {
+  color: $white;
+  background-color: $color-blue;
+}

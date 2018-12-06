@@ -1,0 +1,24 @@
+<div class="row">
+    <div class="col-12">
+        <div class="buildings">
+            <div class="buildings__heading">
+                <h1 class="heading-primary mb-0">
+                    Buildings
+                </h1>
+            </div>
+            <div class="buildings__body">
+                <div class="row">
+                    <div class="col-6">
+                        <app-buildings-group
+                                [buildings]="buildings$ | async">
+                        </app-buildings-group>
+                    </div>
+                    <div class="col-12 mt-3">
+                        <app-buildings-statistics [buildingData$]="buildingData$$| async">
+                        </app-buildings-statistics>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

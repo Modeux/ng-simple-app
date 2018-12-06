@@ -1,0 +1,40 @@
+<div class="row">
+    <ng-container *ngIf="(records$ | async) as records;">
+        <ng-container *ngIf="records.length > 0; else noRecord;">
+            <div class="col-6 mb-4" *ngFor="let record of records">
+                <div class="cus-card">
+                    <div class="cus-card__heading d-flex align-items-center">
+                        <h2 class="cus-card__heading__title mb-0">View Record - {{record.name}}</h2>
+                    </div>
+                    <div class="cus-card__body d-flex flex-row justify-content-center">
+                        <ngx-charts-bar-vertical
+                                [scheme]="colorScheme"
+                                [results]="record.visitors"
+                                [gradient]="gradient"
+                                [xAxis]="showXAxis"
+                                [yAxis]="showYAxis"
+                                [barPadding]="10"
+                                [showXAxisLabel]="showXAxisLabel"
+                                [showYAxisLabel]="showYAxisLabel"
+                                [xAxisLabel]="xAxisLabel"
+                                [yAxisLabel]="yAxisLabel">
+                        </ngx-charts-bar-vertical>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <ng-template #noRecord>
+            <div class="col-6">
+                <div class="cus-card">
+                    <div class="cus-card__heading d-flex align-items-center">
+                        <h2 class="cus-card__heading__title mb-0">View Record</h2>
+                    </div>
+                    <div class="cus-card__body d-flex flex-row justify-content-center">
+                        <p>No Record Yet!</p>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </ng-container>
+</div>
+

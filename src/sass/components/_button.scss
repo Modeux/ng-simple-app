@@ -1,0 +1,29 @@
+@import "functions";
+@import "variables";
+@import "~src/sass/abstracts/variables";
+
+.cus-btn-primary {
+  cursor: pointer;
+  color: $white;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px 0 rgba(93, 120, 255, 0.15);
+  padding: .65rem 1.25rem;
+  background-color: $color-blue;
+}
+
+.btn-tab {
+  cursor: pointer;
+  background-color: $white;
+  min-width: 4.6875rem;
+  height: 4.6875rem;
+  box-shadow: $shadow;
+  border-radius: 8px;
+  margin: 0 0.25rem;
+  color: $color-text-gray;
+  padding: .8rem;
+  &:hover {
+    color: $white;
+    background-color: $color-blue;
+    transition: .3s;
+  }
+}

@@ -1,0 +1,14 @@
+@import "functions";
+@import "variables";
+@import "~src/sass/abstracts/variables";
+
+.toolbar {
+  height: 4.6875rem;
+  background-color: $white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: calc(100% - 15.625rem);
+  box-shadow: $shadow;
+  z-index: 10000;
+}

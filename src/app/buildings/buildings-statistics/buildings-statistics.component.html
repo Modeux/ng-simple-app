@@ -1,0 +1,24 @@
+<div class="cus-card">
+    <ng-container *ngIf="(buildingData$ | async) as buildingData">
+        <div class="cus-card__heading d-flex align-items-center justify-content-between">
+            <h2 class="cus-card__heading__title mb-0">Visitor Statistics - {{buildingData.name}}</h2>
+            <button class="btn cus-btn-primary" (click)="saveData(buildingData)">Save</button>
+        </div>
+        <div class="cus-card__body d-flex flex-row justify-content-center">
+            <div class="bar-chart">
+                <ngx-charts-bar-vertical
+                        [scheme]="colorScheme"
+                        [results]="buildingData.visitors"
+                        [gradient]="gradient"
+                        [xAxis]="showXAxis"
+                        [yAxis]="showYAxis"
+                        [barPadding]="40"
+                        [showXAxisLabel]="showXAxisLabel"
+                        [showYAxisLabel]="showYAxisLabel"
+                        [xAxisLabel]="xAxisLabel"
+                        [yAxisLabel]="yAxisLabel">
+                </ngx-charts-bar-vertical>
+            </div>
+        </div>
+    </ng-container>
+</div>

@@ -1,0 +1,22 @@
+<div class="cus-card">
+    <div class="cus-card__heading d-flex align-items-center">
+        <h2 class="cus-card__heading__title mb-0">View By Buildings</h2>
+    </div>
+    <div class="cus-card__body d-flex flex-row justify-content-center">
+        <ng-container *ngIf="buildings; else loading;">
+            <div class="btn-tab d-flex justify-content-center align-items-center"
+                 *ngFor="let building of buildings;"
+                 [ngClass]="{'active': activeBuildingId === building.id}"
+                 (click)="selectBuilding(building)">
+                <div class="btn-tab__content d-flex flex-column justify-content-center align-items-center">
+                    <fa-icon class="mb-1" [icon]="faBuilding" size="lg">
+                    </fa-icon>
+                    <span>
+                        {{building.name}}
+                    </span>
+                </div>
+            </div>
+        </ng-container>
+        <ng-template #loading>Loading....</ng-template>
+    </div>
+</div>
